@@ -1,0 +1,14 @@
+Node   1 entered DoOneLocalAutocorrelation( )
+Node   2 entered DoOneLocalAutocorrelation( )
+Node   0 entered DoOneLocalAutocorrelation( )
+Node   3 entered DoOneLocalAutocorrelation( )
+[cn-c-1][[12712,1],0][btl_tcp_frag.c:227:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv error (0x7ffeb5268de8, 8162144)
+	Bad address(1)
+
+[cn-c-2][[12712,1],1][btl_tcp_frag.c:130:mca_btl_tcp_frag_send] mca_btl_tcp_frag_send: writev error (0x14866d8, 8052704)
+	Bad address(1)
+
+[cn-c-2][[12712,1],1][btl_tcp_frag.c:130:mca_btl_tcp_frag_send] mca_btl_tcp_frag_send: writev error (0x1c346b8, 204600)
+	Bad address(1)
+
+[cn-c-2.hpc.engr.oregonstate.edu:19789] pml_ob1_sendreq.c:308 FATAL
