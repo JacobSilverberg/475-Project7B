@@ -28,3 +28,4 @@ Sums[2] = A[0]*A[2] + A[1]*A[3] + ... + A[NUMELEMENTS-2]*A[0] + A[NUMELEMENTS-1]
 
 and do it again, and do it again, and so on. 
 
+What does this do? You then graph these resulting Sums[*] as a function of how much you shifted them over each time. If there is a secret sine wave hidden in the signal, well, let's just say that you will notice it in the graph of the Sums[*].
