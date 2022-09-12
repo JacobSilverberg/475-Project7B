@@ -12,20 +12,20 @@ What does this actually mean? It means you take an apparently noisy signal, i.e.
 
 You then multiply each array element by itself and add them up:
 
-Sums[0] = A[0]*A[0] + A[1]*A[1] + ... + A[NUMELEMENTS-1]*A[NUMELEMENTS-1]
+Sums[0] = A[0]\*A[0] + A[1]\*A[1] + ... + A[NUMELEMENTS-1]\*A[NUMELEMENTS-1]
 
-That will give you a large number because you are essentially taking the sum of the squares of the array elements. Big whoop. This is not interesting, so we ignore Sums[0]. The other Sums[*], however, are much more interesting.
+That will give you a large number because you are essentially taking the sum of the squares of the array elements. Big whoop. This is not interesting, so we ignore Sums[0]. The other Sums[\*], however, are much more interesting.
 
 You then shift the array over one index and do the pairwise multiplication again. This gives a resulting value of
 
-Sums[1] = A[0]*A[1] + A[1]*A[2] + ... + A[NUMELEMENTS-1]*A[0]
+Sums[1] = A[0]\*A[1] + A[1]\*A[2] + ... + A[NUMELEMENTS-1]\*A[0]
 
 Now, if the signal is truly noisy, there will be positive and negative array values in there being multiplied together, giving both positive and negative products. Many of these will cancel each other out. So, by doing this shift before multiplying, you will get a much smaller sum.
 
 You then shift over by 2 indices and do it again,
 
-Sums[2] = A[0]*A[2] + A[1]*A[3] + ... + A[NUMELEMENTS-2]*A[0] + A[NUMELEMENTS-1]*A[1]
+Sums[2] = A[0]\*A[2] + A[1]\*A[3] + ... + A[NUMELEMENTS-2]\*A[0] + A[NUMELEMENTS-1]\*A[1]
 
 and do it again, and do it again, and so on. 
 
-What does this do? You then graph these resulting Sums[*] as a function of how much you shifted them over each time. If there is a secret sine wave hidden in the signal, well, let's just say that you will notice it in the graph of the Sums[*].
+What does this do? You then graph these resulting Sums[\*] as a function of how much you shifted them over each time. If there is a secret sine wave hidden in the signal, well, let's just say that you will notice it in the graph of the Sums[\*].
